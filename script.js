@@ -2,6 +2,7 @@ const extendHex = (shortHex) => {
   let ans="";
   for (let index = 0; index < shortHex.length; index++) {
 	  if(index==0){
+		  ans+=shortHex.charAt(index);
 		  continue
 	  }
   	ans+=shortHex.charAt(index)+shortHex.charAt(index)
