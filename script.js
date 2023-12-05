@@ -1,13 +1,23 @@
 const extendHex = (shortHex) => {
-  let ans="";
-  for (let index = 0; index < shortHex.length; index++) {
-	  if(index==0){
-		  ans+=shortHex.charAt(index);
-		  continue
-	  }
-  	ans+=shortHex.charAt(index)+shortHex.charAt(index)
-  }	
-	return ans;
+  let result ="";
+	if(shortHex.length ===4){
+		let r,g,b;
+		r = shortHex[1];
+		g = shortHex[2];
+		b = shortHex[3];
+		let hexcode = "#"+r+r+g+g+b+b;
+		result += hexcode;
+	}
+	if(shortHex.length===3){
+		let r,g,b;
+		r = shortHex[0];
+		g = shortHex[1];
+		b = shortHex[2];
+		let hexcode = "#"+r+r+g+g+b+b;
+		result += hexcode;
+	}
+
+	return result;
 };
 
 // Do not change the code below.
